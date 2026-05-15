@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Почему Mentorium_AI? | Школа практического ИИ</title>
+    <title>Почему Mentorium_AI?</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
@@ -25,117 +25,105 @@
             color: var(--text);
             font-family: 'Inter', sans-serif;
             line-height: 1.6;
-            overflow-x: hidden;
-            background: radial-gradient(circle at 0% 0%, #0d1117 0%, #05060a 100%);
-        }
-
-        .glow {
-            position: fixed;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(0, 210, 255, 0.1) 0%, transparent 70%);
-            bottom: -150px;
-            left: -150px;
-            z-index: -1;
+            background: radial-gradient(circle at top right, #0d1117 0%, #05060a 100%);
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 1100px; /* Немного расширил контейнер для больших блоков */
             margin: 0 auto;
             padding: 60px 20px;
         }
 
         header {
             text-align: center;
-            margin-bottom: 70px;
+            margin-bottom: 80px;
         }
 
         .logo-text {
             font-family: 'Orbitron', sans-serif;
-            font-size: clamp(1.8rem, 5vw, 2.8rem);
-            letter-spacing: 4px;
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            letter-spacing: 5px;
             background: linear-gradient(to right, var(--accent-blue), var(--accent-purple));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 10px;
             font-weight: 700;
+            margin-bottom: 10px;
         }
 
         .tagline {
             font-weight: 300;
-            letter-spacing: 3px;
-            color: #666;
+            letter-spacing: 4px;
+            color: #555;
             text-transform: uppercase;
-            font-size: 0.8rem;
+            font-size: 0.85rem;
         }
 
-        /* Сетка преимуществ - 4 блока */
+        /* ТА САМАЯ СЕТКА: По 2 больших блока в ряд */
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-            gap: 25px;
-            margin-bottom: 50px;
+            grid-template-columns: 1fr 1fr; /* Строго две колонки */
+            gap: 30px;
+            margin-bottom: 60px;
         }
 
         .card {
             background: var(--glass);
-            backdrop-filter: blur(15px);
+            backdrop-filter: blur(20px);
             border: 1px solid var(--border);
-            border-radius: 20px;
-            padding: 35px 25px;
-            transition: all 0.4s ease;
+            border-radius: 30px;
+            padding: 50px 40px; /* Увеличил внутренние отступы */
+            transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1);
             position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
+            overflow: hidden;
         }
 
         .card:hover {
-            border-color: var(--accent-purple);
-            transform: translateY(-8px);
-            background: rgba(255, 255, 255, 0.05);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            border-color: var(--accent-blue);
+            transform: scale(1.02);
+            background: rgba(255, 255, 255, 0.06);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
         }
 
         .card h3 {
             font-family: 'Orbitron', sans-serif;
             color: var(--accent-blue);
-            margin-bottom: 15px;
-            font-size: 1.1rem;
-            min-height: 3rem;
-            display: flex;
-            align-items: center;
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+            letter-spacing: 1px;
         }
 
         .card p { 
-            font-size: 0.9rem; 
-            color: #aaa; 
-            line-height: 1.5;
+            font-size: 1rem; 
+            color: #ccc; 
+            line-height: 1.7;
         }
 
         /* Инженерный блок */
         .founder-block {
-            background: linear-gradient(135deg, rgba(157, 80, 187, 0.08) 0%, rgba(0, 210, 255, 0.08) 100%);
-            border-radius: 30px;
-            padding: 50px;
-            margin: 60px 0;
+            background: linear-gradient(135deg, rgba(157, 80, 187, 0.1) 0%, rgba(0, 210, 255, 0.05) 100%);
+            border-radius: 40px;
+            padding: 60px;
+            margin: 40px 0 80px 0;
             border: 1px solid var(--border);
             text-align: center;
         }
 
         .founder-block h2 {
             font-family: 'Orbitron', sans-serif;
-            margin-bottom: 20px;
-            font-size: 1.6rem;
+            margin-bottom: 25px;
+            font-size: 2rem;
+            background: linear-gradient(to right, #fff, #888);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .highlight { color: var(--accent-orange); font-weight: 600; }
 
         /* Кнопка */
-        .cta-wrap { text-align: center; margin-top: 20px; }
+        .cta-wrap { text-align: center; }
         .btn {
             display: inline-block;
-            padding: 22px 60px;
+            padding: 25px 80px;
             background: linear-gradient(90deg, var(--accent-purple), var(--accent-blue));
             color: white;
             text-decoration: none;
@@ -143,27 +131,28 @@
             font-weight: 700;
             font-family: 'Orbitron', sans-serif;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 0.9rem;
-            box-shadow: 0 10px 30px rgba(157, 80, 187, 0.4);
-            transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-        .btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 15px 45px rgba(157, 80, 187, 0.6);
+            letter-spacing: 3px;
+            font-size: 1rem;
+            box-shadow: 0 15px 40px rgba(157, 80, 187, 0.4);
+            transition: 0.4s;
         }
 
-        @media (max-width: 768px) {
-            .container { padding: 40px 15px; }
-            .founder-block { padding: 30px 20px; }
-            .card { padding: 25px; text-align: center; }
-            .card h3 { justify-content: center; min-height: auto; }
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(157, 80, 187, 0.7);
+            letter-spacing: 5px;
+        }
+
+        /* Адаптив для мобилок */
+        @media (max-width: 850px) {
+            .grid { grid-template-columns: 1fr; } /* На телефонах в одну колонку */
+            .container { padding: 40px 20px; }
+            .card { padding: 40px 30px; }
+            .founder-block { padding: 40px 20px; }
         }
     </style>
 </head>
 <body>
-
-<div class="glow"></div>
 
 <div class="container">
     <header>
@@ -174,25 +163,25 @@
     <div class="grid">
         <div class="card">
             <h3>Architecture First</h3>
-            <p>Мы учим проектировать системы, а не просто писать промпты. Фундаментальный инженерный подход к каждой нейросети.</p>
+            <p>Мы учим проектировать системы, а не просто писать промпты. Фундаментальный инженерный подход к каждой нейросети для создания отказоустойчивых решений.</p>
         </div>
         <div class="card">
             <h3>Production Ready</h3>
-            <p>Методики, проверенные в AI-агентстве <b>Neuron_AI</b>. Только рабочие решения для реального бизнеса и автоматизации.</p>
+            <p>Методики, проверенные в AI-агентстве <b>Neuron_AI</b>. Только рабочие инструменты, которые мы ежедневно внедряем в реальный сектор бизнеса.</p>
         </div>
         <div class="card">
             <h3>Hard Stack</h3>
-            <p>Освоение профессионального стека: Python, Go, n8n и LangGraph для создания автономных цифровых сотрудников.</p>
+            <p>Освоение профессионального стека технологий: Python, Go, n8n и LangGraph. Создавайте автономных цифровых сотрудников нового поколения.</p>
         </div>
         <div class="card">
             <h3>Scale & Grow</h3>
-            <p>Четкий путь развития от новичка до AI-архитектора. Мы даем базу, которая не устареет при выходе новых моделей.</p>
+            <p>Четкий путь развития от новичка до AI-архитектора. Мы даем глубокую базу знаний, которая останется актуальной вне зависимости от смены хайповых моделей.</p>
         </div>
     </div>
 
     <div class="founder-block">
         <h2>Инженерный подход к ИИ</h2>
-        <p>Программа Mentorium_AI создана профессиональными <span class="highlight">ИТ-архитекторами</span>. Мы верим, что будущее за теми, кто понимает логику алгоритмов. Наша миссия — превратить хаос нейросетей в ваш предсказуемый и мощный рабочий инструмент.</p>
+        <p>Программа Mentorium_AI разработана действующими <span class="highlight">ИТ-архитекторами</span>. Мы верим, что будущее за теми, кто управляет алгоритмами, а не просто потребляет их контент. Превратите мощь искусственного интеллекта в свой главный актив.</p>
     </div>
 
     <div class="cta-wrap">
